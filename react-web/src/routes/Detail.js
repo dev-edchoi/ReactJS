@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Detail() {
   const { id } = useParams();
@@ -33,12 +33,11 @@ function Detail() {
             alt={movie.data.movie.id}
           />
           <ul>
-            {movie.data.movie.genres.map((g) => {
-              <li key={g}>{g}</li>;
-            })}
+            {movie.data.movie.genres.map((g) => (
+              <li key={g}>{g}</li>
+            ))}
           </ul>
           <h4>{movie.data.movie.description_full}</h4>
-          
         </div>
       )}
     </div>
